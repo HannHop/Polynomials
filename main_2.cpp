@@ -4,47 +4,15 @@
 #include <cmath>
 #include <windows.h>
 
+#include "polynomial_part.h"
+#include "operations.h"
+#include "ordering.h"
+#include "polynomial_adder.h"
+#include "polynomial_subtractor.h"
+#include "polynomial_scalar_multiplication.h"
+
 using namespace std;
 
-class Polynomial_part{
-private:
-    double coefficient;
-    int power;
-public:
-    Polynomial_part(double c, int p){
-        coefficient = c;
-        power = p;
-    };
-
-    int get_power(){
-        return this->power;
-    }
-
-    double get_coeff(){
-        return this->coefficient;
-    }
-
-    void set_coeff(double var){
-        this->coefficient=var;
-    }
-
-    void print() {
-        if (this->power == 0) {
-            cout << this->coefficient;
-            return;
-        }
-
-        cout << this->coefficient << "x^" << this->power;
-    }
-};
-
-class Operations{
-public:
-  	Operations(){};
-
-  	virtual list<Polynomial_part> operate(list<Polynomial_part> list1, list<Polynomial_part> list2) {};
-  	virtual list<Polynomial_part> operate(list<Polynomial_part> list1, double liczba) {};
-};
 
 list<Polynomial_part> parse_input(string input) {
     regex parts_regex("\\-?(?:\\d+x?|x)(?:\\^\\-?\\d+)?");
@@ -95,129 +63,6 @@ bool should_remove (Polynomial_part part) {
         if(part1.get_power()>part2.get_power()) return 1;
         return 0;
     }
-
-class Ordering{
-private:
-
-
-    list<Polynomial_part> internal_order(list<Polynomial_part> not_ordered_list){
-        int coeff_sum = 0;
-        for(list<Polynomial_part>::iterator i = not_ordered_list.begin(); i!=not_ordered_list.end(); i++) {
-            coeff_sum = 0;
-
-            for (list<Polynomial_part>::iterator j = not_ordered_list.begin(); j!=not_ordered_list.end(); j++){
-                if((*i).get_power() == (*j).get_power()){
-                    coeff_sum=coeff_sum+(*j).get_coeff();
-                    (*j).set_coeff(0);
-                }
-            }
-
-            (*i).set_coeff(coeff_sum);
-        }
-        list<Polynomial_part> result_list = not_ordered_list;
-        result_list.remove_if(should_remove);
-        result_list.sort(compare);
-
-
-    return result_list;
-    }
-public:
-    Ordering(){};
-    virtual list<Polynomial_part> order(list<Polynomial_part> not_ordered){
-        list<Polynomial_part> res = this->internal_order(not_ordered);
-        return res;
-    }
-};
-
-
-class Polynomial_adder: virtual Operations, virtual Ordering {
-protected:
-    list<Polynomial_part> internal_add (list<Polynomial_part> first_polynomial, list<Polynomial_part> second_polynomial) {
-        list<Polynomial_part> result_list;
-        for(list<Polynomial_part>::iterator i = first_polynomial.begin(); i!=first_polynomial.end();i++){
-                int a = result_list.size();
-                for(list<Polynomial_part>::iterator j = second_polynomial.begin(); j!=second_polynomial.end();j++){
-                    if ((*i).get_power() == (*j).get_power()) {
-                            Polynomial_part new_polynom_part((*i).get_coeff()+(*j).get_coeff(),(*i).get_power());
-                            result_list.push_back(new_polynom_part);
-
-                            }
-                }
-            if (a == result_list.size()) {
-            Polynomial_part new_polynom_part((*i).get_coeff(),(*i).get_power());
-            result_list.push_back(new_polynom_part);
-            }
-        }
-        bool flag = 1;
-        for(list<Polynomial_part>::iterator i = second_polynomial.begin(); i!=second_polynomial.end();i++){
-
-                for(list<Polynomial_part>::iterator j = result_list.begin(); j!=result_list.end();j++){
-                    if ((*i).get_power() == (*j).get_power()) {
-                    flag = 0;
-                    break;
-                        }
-                }
-            if (flag == 1) {
-                    Polynomial_part new_polynom_part((*i).get_coeff(),(*i).get_power());
-                    result_list.push_back(new_polynom_part);
-            }
-            flag = 1;
-        }
-
-        return result_list;
-    }
-public:
-    Polynomial_adder() {};
-  	list<Polynomial_part> operate(list<Polynomial_part> list1, list<Polynomial_part> list2) {
-        list<Polynomial_part> res = this->internal_add(list1, list2);
-        return order(res);
-    };
-};
-
-class Polynomial_subtractor: virtual Operations, virtual Ordering {
-protected:
-    list<Polynomial_part> internal_subtract (list<Polynomial_part> first_polynomial, list<Polynomial_part> second_polynomial) {
-        list<Polynomial_part> result_list;
-        for(list<Polynomial_part>::iterator i = first_polynomial.begin(); i!=first_polynomial.end();i++){
-                int a = result_list.size();
-                for(list<Polynomial_part>::iterator j = second_polynomial.begin(); j!=second_polynomial.end();j++){
-                    if ((*i).get_power() == (*j).get_power()) {
-                            Polynomial_part new_polynom_part((*i).get_coeff()-(*j).get_coeff(),(*i).get_power());
-                            result_list.push_back(new_polynom_part);
-
-                            }
-                }
-            if (a == result_list.size()) {
-            Polynomial_part new_polynom_part((*i).get_coeff(),(*i).get_power());
-            result_list.push_back(new_polynom_part);
-            }
-        }
-        bool flag = 1;
-        for(list<Polynomial_part>::iterator i = second_polynomial.begin(); i!=second_polynomial.end();i++){
-                int a = result_list.size();
-
-                for(list<Polynomial_part>::iterator j = result_list.begin(); j!=result_list.end();j++){
-                    if ((*i).get_power() == (*j).get_power()) {
-                    flag = 0;
-                    break;
-                        }
-                }
-            if (flag == 1) {
-                    Polynomial_part new_polynom_part(-(*i).get_coeff(),(*i).get_power());
-                    result_list.push_back(new_polynom_part);
-            }
-            flag = 1;
-        }
-
-        return result_list;
-    }
-public:
-      Polynomial_subtractor() {};
-      list<Polynomial_part> operate(list<Polynomial_part> list1, list<Polynomial_part> list2){
-        list<Polynomial_part> res = this->internal_subtract(list1, list2);
-        return order(res);
-    }
-};
 
 class Polynomial_scalar_multiplication {
 private:

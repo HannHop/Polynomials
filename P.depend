@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1567874136 source:c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\main.cpp
+	<iostream>
+	<regex>
+	<list>
+	<cmath>
+	<windows.h>
+
+1567876451 source:c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\polynomial_multiplication.cpp
+	<list>
+	"polynomial_part.h"
+	"ordering.h"
+
+1567878553 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\polynomial_part.h
+
+1567878828 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\ordering.h
+	<iostream>
+	<regex>
+	<list>
+
+1567879037 source:c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\polynomial_input.cpp
+	<list>
+	<iostream>
+	<regex>
+	"polynomial_part.h"
+
+1567878933 source:c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\utils.cpp
+	<list>
+	<cmath>
+	<windows.h>
+	<regex>
+	"polynomial_part.h"
+	"operations.h"
+	"ordering.h"
+	"polynomial_adder.h"
+	"polynomial_subtractor.h"
+	"polynomial_scalar_multiplication.h"
+	"polynomial_multiplication.h"
+	"polynomial_input.h"
+	"utils.h"
+
+1567878712 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\operations.h
+	<list>
+
+1567878593 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\polynomial_adder.h
+	<iostream>
+	<list>
+	"polynomial_part.h"
+	"polynomial_adder.h"
+	"operations.h"
+	"ordering.h"
+
+1567878660 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\polynomial_subtractor.h
+	<iostream>
+	<list>
+	<cmath>
+	"polynomial_part.h"
+	"ordering.h"
+	"operations.h"
+
+1567878620 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\polynomial_scalar_multiplication.h
+	<list>
+	"polynomial_part.h"
+
+1567878798 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\polynomial_multiplication.h
+	<list>
+	"polynomial_part.h"
+	"ordering.h"
+
+1567878789 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\polynomial_input.h
+	<list>
+	"polynomial_part.h"
+
+1567878978 c:\users\rimmon\documents\important shit\focp sem2\task 5 polymorphism\p\utils.h
+	<list>
+	"polynomial_part.h"
+

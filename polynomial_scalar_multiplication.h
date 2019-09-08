@@ -5,6 +5,8 @@
 
 #include "polynomial_part.h"
 
+using namespace std;
+
 
 class Polynomial_scalar_multiplication {
 private:

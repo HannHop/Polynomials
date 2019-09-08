@@ -9,47 +9,44 @@
 
 using namespace std;
 
-class Polynomial_subtractor: virtual Operations, virtual Ordering {
-protected:
-    list<Polynomial_part> internal_subtract (list<Polynomial_part> first_polynomial, list<Polynomial_part> second_polynomial) {
-        list<Polynomial_part> result_list;
-        for(list<Polynomial_part>::iterator i = first_polynomial.begin(); i!=first_polynomial.end();i++){
-                int a = result_list.size();
-                for(list<Polynomial_part>::iterator j = second_polynomial.begin(); j!=second_polynomial.end();j++){
-                    if ((*i).get_power() == (*j).get_power()) {
-                            Polynomial_part new_polynom_part((*i).get_coeff()-(*j).get_coeff(),(*i).get_power());
-                            result_list.push_back(new_polynom_part);
+list<Polynomial_part> Polynomial_subtractor::internal_subtract (list<Polynomial_part> first_polynomial, list<Polynomial_part> second_polynomial) {
+    list<Polynomial_part> result_list;
+    for(list<Polynomial_part>::iterator i = first_polynomial.begin(); i!=first_polynomial.end();i++){
+            int a = result_list.size();
+            for(list<Polynomial_part>::iterator j = second_polynomial.begin(); j!=second_polynomial.end();j++){
+                if ((*i).get_power() == (*j).get_power()) {
+                        Polynomial_part new_polynom_part((*i).get_coeff()-(*j).get_coeff(),(*i).get_power());
+                        result_list.push_back(new_polynom_part);
 
-                            }
-                }
-            if (a == result_list.size()) {
-            Polynomial_part new_polynom_part((*i).get_coeff(),(*i).get_power());
-            result_list.push_back(new_polynom_part);
-            }
-        }
-        bool flag = 1;
-        for(list<Polynomial_part>::iterator i = second_polynomial.begin(); i!=second_polynomial.end();i++){
-                int a = result_list.size();
-
-                for(list<Polynomial_part>::iterator j = result_list.begin(); j!=result_list.end();j++){
-                    if ((*i).get_power() == (*j).get_power()) {
-                    flag = 0;
-                    break;
                         }
-                }
-            if (flag == 1) {
-                    Polynomial_part new_polynom_part(-(*i).get_coeff(),(*i).get_power());
-                    result_list.push_back(new_polynom_part);
             }
-            flag = 1;
+        if (a == result_list.size()) {
+        Polynomial_part new_polynom_part((*i).get_coeff(),(*i).get_power());
+        result_list.push_back(new_polynom_part);
         }
+    }
+    bool flag = 1;
+    for(list<Polynomial_part>::iterator i = second_polynomial.begin(); i!=second_polynomial.end();i++){
+            int a = result_list.size();
 
-        return result_list;
+            for(list<Polynomial_part>::iterator j = result_list.begin(); j!=result_list.end();j++){
+                if ((*i).get_power() == (*j).get_power()) {
+                flag = 0;
+                break;
+                    }
+            }
+        if (flag == 1) {
+                Polynomial_part new_polynom_part(-(*i).get_coeff(),(*i).get_power());
+                result_list.push_back(new_polynom_part);
+        }
+        flag = 1;
     }
-public:
-      Polynomial_subtractor() {};
-      list<Polynomial_part> operate(list<Polynomial_part> list1, list<Polynomial_part> list2){
-        list<Polynomial_part> res = this->internal_subtract(list1, list2);
-        return order(res);
-    }
-};
+
+    return result_list;
+}
+
+
+list<Polynomial_part> Polynomial_subtractor::operate(list<Polynomial_part> list1, list<Polynomial_part> list2){
+    list<Polynomial_part> res = this->internal_subtract(list1, list2);
+    return order(res);
+}

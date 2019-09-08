@@ -5,6 +5,8 @@
 #include <regex>
 #include <list>
 
+#include "Polynomial_part.h"
+
 using namespace std;
 
 class Ordering{

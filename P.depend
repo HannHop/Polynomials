@@ -75,3 +75,238 @@
 	<list>
 	"polynomial_part.h"
 
+1567965708 source:e:\projekty\polynomials\main.cpp
+	"utils.h"
+
+1567965708 e:\projekty\polynomials\utils.h
+	<list>
+	"polynomial_part.h"
+
+1567965708 e:\projekty\polynomials\polynomial_part.h
+
+1567972561 source:e:\projekty\polynomials\ordering.cpp
+	<iostream>
+	<regex>
+	<list>
+	"ordering.h"
+	"polynomial_part.h"
+	"utils.h"
+
+1567973122 source:e:\projekty\polynomials\polynomial_adder.cpp
+	<iostream>
+	<list>
+	<cmath>
+	<string>
+	"polynomial_adder.h"
+	"polynomial_part.h"
+	"operations.h"
+	"ordering.h"
+
+1567972454 e:\projekty\polynomials\operations.h
+	<list>
+	"polynomial_part.h"
+
+1567971268 e:\projekty\polynomials\ordering.h
+	<iostream>
+	<regex>
+	<list>
+	"Polynomial_part.h"
+
+1567972204 source:e:\projekty\polynomials\polynomial_input.cpp
+	<list>
+	<iostream>
+	<regex>
+	<string>
+	"polynomial_part.h"
+	"polynomial_input.h"
+
+1567972754 source:e:\projekty\polynomials\polynomial_multiplication.cpp
+	<list>
+	"polynomial_multiplication.h"
+	"polynomial_part.h"
+	"ordering.h"
+
+1567972765 source:e:\projekty\polynomials\polynomial_part.cpp
+	<iostream>
+	"polynomial_part.h"
+
+1567972867 source:e:\projekty\polynomials\polynomial_scalar_multiplication.cpp
+	<iostream>
+	<list>
+	<cmath>
+	"polynomial_scalar_multiplication.h"
+	"polynomial_part.h"
+	"operations.h"
+
+1567972925 source:e:\projekty\polynomials\polynomial_subtractor.cpp
+	<iostream>
+	<list>
+	<cmath>
+	"polynomial_subtractor.h"
+	"polynomial_part.h"
+	"ordering.h"
+	"operations.h"
+
+1567971827 source:e:\projekty\polynomials\utils.cpp
+	<iostream>
+	<regex>
+	<list>
+	<cmath>
+	<windows.h>
+	<map>
+	"polynomial_part.h"
+	"operations.h"
+	"ordering.h"
+	"polynomial_adder.h"
+	"polynomial_subtractor.h"
+	"polynomial_scalar_multiplication.h"
+	"polynomial_multiplication.h"
+	"polynomial_input.h"
+	"utils.h"
+
+1567965708 e:\projekty\polynomials\polynomial_adder.h
+	<iostream>
+	<list>
+	"polynomial_part.h"
+	"polynomial_adder.h"
+	"operations.h"
+	"ordering.h"
+
+1567965708 e:\projekty\polynomials\polynomial_subtractor.h
+	<iostream>
+	<list>
+	<cmath>
+	"polynomial_part.h"
+	"ordering.h"
+	"operations.h"
+
+1567972984 e:\projekty\polynomials\polynomial_scalar_multiplication.h
+	<list>
+	"polynomial_part.h"
+
+1567965708 e:\projekty\polynomials\polynomial_multiplication.h
+	<list>
+	"polynomial_part.h"
+	"ordering.h"
+
+1567965708 e:\projekty\polynomials\polynomial_input.h
+	<list>
+	"polynomial_part.h"
+
+1567962110 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\main.cpp
+	"utils.h"
+
+1567962110 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\utils.h
+	<list>
+	"polynomial_part.h"
+
+1567970988 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_part.h
+
+1567968962 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\ordering.cpp
+	<iostream>
+	<regex>
+	<list>
+	"ordering.h"
+	"polynomial_part.h"
+	"utils.h"
+
+1567967670 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\ordering.h
+	<iostream>
+	<regex>
+	<list>
+	"Polynomial_part.h"
+
+1567969524 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_adder.cpp
+	<iostream>
+	<list>
+	<cmath>
+	<string>
+	"polynomial_adder.h"
+	"polynomial_part.h"
+	"operations.h"
+	"ordering.h"
+
+1567970776 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_adder.h
+	<iostream>
+	<list>
+	"polynomial_part.h"
+	"polynomial_adder.h"
+	"operations.h"
+	"ordering.h"
+
+1567970886 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\operations.h
+	<list>
+	"polynomial_part.h"
+
+1567968606 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_input.cpp
+	<list>
+	<iostream>
+	<regex>
+	<string>
+	"polynomial_part.h"
+	"polynomial_input.h"
+
+1567962110 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_input.h
+	<list>
+	"polynomial_part.h"
+
+1567969156 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_multiplication.cpp
+	<list>
+	"polynomial_multiplication.h"
+	"polynomial_part.h"
+	"ordering.h"
+
+1567962110 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_multiplication.h
+	<list>
+	"polynomial_part.h"
+	"ordering.h"
+
+1567969166 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_part.cpp
+	<iostream>
+	"polynomial_part.h"
+
+1567969268 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_scalar_multiplication.cpp
+	<iostream>
+	<list>
+	<cmath>
+	"polynomial_scalar_multiplication.h"
+	"polynomial_part.h"
+	"operations.h"
+
+1567969386 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_scalar_multiplication.h
+	<list>
+	"polynomial_part.h"
+
+1567969326 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_subtractor.cpp
+	<iostream>
+	<list>
+	<cmath>
+	"polynomial_subtractor.h"
+	"polynomial_part.h"
+	"ordering.h"
+	"operations.h"
+
+1567970820 c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\polynomial_subtractor.h
+	<iostream>
+	<list>
+	<cmath>
+	"polynomial_part.h"
+	"ordering.h"
+	"operations.h"
+
+1567971112 source:c:\users\rimm\documents\studia\semestr 2\cp\polynomials v2\polynomials\utils.cpp
+	<iostream>
+	<regex>
+	<list>
+	<cmath>
+	<map>
+	"polynomial_part.h"
+	"operations.h"
+	"ordering.h"
+	"polynomial_adder.h"
+	"polynomial_subtractor.h"
+	"polynomial_scalar_multiplication.h"
+	"polynomial_multiplication.h"
+	"polynomial_input.h"
+	"utils.h"
+

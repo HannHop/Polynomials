@@ -32,7 +32,24 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Polynomial_adder.cpp" />
+		<Unit filename="Polynomial_input.cpp" />
+		<Unit filename="Polynomial_multiplication.cpp" />
+		<Unit filename="Polynomial_part.cpp" />
+		<Unit filename="Polynomial_scalar_multiplication.cpp" />
+		<Unit filename="Polynomial_subtractor.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="operations.h" />
+		<Unit filename="ordering.cpp" />
+		<Unit filename="ordering.h" />
+		<Unit filename="polynomial_adder.h" />
+		<Unit filename="polynomial_input.h" />
+		<Unit filename="polynomial_multiplication.h" />
+		<Unit filename="polynomial_part.h" />
+		<Unit filename="polynomial_scalar_multiplication.h" />
+		<Unit filename="polynomial_subtractor.h" />
+		<Unit filename="utils.cpp" />
+		<Unit filename="utils.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

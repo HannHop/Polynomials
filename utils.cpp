@@ -2,7 +2,7 @@
 #include <regex>
 #include <list>
 #include <cmath>
-#include <windows.h>
+#include <map>
 
 #include "polynomial_part.h"
 #include "operations.h"
@@ -155,7 +155,6 @@ switch (options[c]){
 
     case 7: {
         cout<<"Bye bye!"<<endl;
-        Sleep(5000);
         return 0;
     }break;
 
@@ -167,7 +166,6 @@ switch (options[c]){
     if (co=='Y' || co == 'y') goto once_again;
     if (co=='N' || co == 'n') {
             cout<<"Bye bye!"<<endl;
-            Sleep(5000);
             return 0;
     }
 }

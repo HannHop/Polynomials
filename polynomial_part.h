@@ -6,7 +6,10 @@ private:
     double coefficient;
     int power;
 public:
-    Polynomial_part(double c, int p){};
+    Polynomial_part(double c, int p){
+        coefficient = c;
+        power = p;
+    };
 
     int get_power();
 

@@ -1,8 +1,10 @@
 #include <list>
 #include <iostream>
 #include <regex>
+#include <string>
 
 #include "polynomial_part.h"
+#include "polynomial_input.h"
 
 using namespace std;
 
@@ -46,14 +48,8 @@ list<Polynomial_part> parse_input(string input) {
     return parts;
 }
 
-class Polynomial_input {
-private:
-    list<Polynomial_part> polynomial;
-public:
-    Polynomial_input() {};
-
-    void get_input(){
-        int max_power=0;
+void Polynomial_input::get_input() {
+    int max_power=0;
         string input;
         cin>>input;
 
@@ -63,17 +59,17 @@ public:
         }
 
         this->polynomial = list_unsorted;
-    }
-    list<Polynomial_part> get_polynomial(){
-        return this->polynomial;
-    }
+}
 
+list<Polynomial_part> Polynomial_input::get_polynomial()
+ {
+     return this->polynomial;
+ }
 
-    void print() {
+ void Polynomial_input::print() {
         for (list<Polynomial_part>::iterator i = this->polynomial.begin(); i!=this->polynomial.end();i++){
             (*i).print();
         }
 
         cout << endl;
-    }
-};
+ }
